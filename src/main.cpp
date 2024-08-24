@@ -11,7 +11,7 @@ extern "C" {
 #include "console.h"
 #include "player.h"
 
-#define VERSION "0.5.0"
+#define VERSION "0.6.0"
 
 static bool g_running = true;
 static bool g_paused = false;
@@ -70,6 +70,7 @@ static const option options[] =
 void quit(int)
 {
 	g_running = false;
+	SDL_PauseAudio(1);
 }
 
 // ----------------------------------------------------------------------------
@@ -323,8 +324,7 @@ static void mainLoopSDL(OPLPlayer *player, int bufferSize, bool interactive)
 			{
 			case 0x1b:
 			case 'q':
-				g_running = false;
-				SDL_PauseAudio(1);
+				quit(0);
 				continue;
 			
 			case 'p':

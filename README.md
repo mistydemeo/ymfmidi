@@ -13,7 +13,7 @@ ymfmidi is a MIDI player based on the OPL3 emulation core from [ymfm](https://gi
 * Can play files containing multiple songs (XMI, MIDI format 2)
 * Supported sequence formats:
     * `.hmi`, `.hmp` HMI Sound Operating System
-    * `.mid` Standard MIDI files (format 0 or 1)
+    * `.mid` Standard MIDI files
     * `.mus` DMX sound system / Doom engine
     * `.rmi` Microsoft RIFF MIDI
     * `.xmi` Miles Sound System / Audio Interface Library

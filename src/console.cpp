@@ -30,6 +30,12 @@ void consoleOpen()
 	}
 	
 	g_console = CreateConsoleScreenBuffer(GENERIC_WRITE, 0, NULL, CONSOLE_TEXTMODE_BUFFER, NULL);
+	
+	CONSOLE_CURSOR_INFO cursor;
+	cursor.dwSize = 1;
+	cursor.bVisible = false;
+	SetConsoleCursorInfo(g_console, &cursor);
+	
 	SetConsoleActiveScreenBuffer(g_console);
 
 	int fd = _open_osfhandle((intptr_t)g_console, O_WRONLY | O_TEXT);

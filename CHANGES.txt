@@ -1,3 +1,11 @@
+v0.6.0 [2024-08-24] - official KEX Doom and ROTT version
+- Added -mono switch for OPL3
+- Added support for GS/XG drum kit selection
+- Fixed playing .mid files that have no tempo events and a non-default PPQN setting
+- Improved key on/off behavior to avoid weird ADSR artifacts
+- Improved resampling
+- Improved voice allocation some more
+
 v0.5.0 [2022-09-28]
 - Added option to simulate OPL or OPL2 instead of OPL3
 - Added configurable highpass filter to reduce DC offset (default cutoff is 5Hz)
